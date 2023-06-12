@@ -2,12 +2,13 @@ import React from 'react';
 
 interface GradientLineProps {
   gradient: string;
+  width:string;
 }
 
-const GradientLine: React.FC<GradientLineProps> = ({ gradient }) => {
+const GradientLine: React.FC<GradientLineProps> = ({ gradient,width }) => {
   const lineStyle: React.CSSProperties = {
     position: 'absolute',
-    width: '1440px',
+    width: width,
     height: '11px',
     left: '0px',
     top: '0px',

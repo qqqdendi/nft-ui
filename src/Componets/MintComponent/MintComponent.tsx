@@ -7,24 +7,35 @@ import Button from "../../uikit/Button/Button";
 const MintComponent = () => {
   const cardStyles: React.CSSProperties = {
     width: "30%",
-    margin: "40px 20px",
+    height: "30%",
   };
 
   const containerStyles: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
-    padding:"20px"
+    padding: "0px",
+    gap: "2px", // Добавлено свойство gap для отступов между элементами
   };
 
+  const inputStyles: React.CSSProperties = {
+    width: "100%",
+    height: "33px",
+    background: "#070510",
+    borderRadius: "10px",
+    outline: "none",
+    color: "#ffffff",
+    padding: "8px 12px",
+    margin: "2% 0",
+  };
+
+  
   return (
     <Card customStyles={cardStyles}>
       <div style={containerStyles}>
         <Typography
           tag="h1"
           fontSize="48px"
-          fontType="Inter"
           color="#FFFFFF"
           lineHeight="58px"
         >
@@ -37,51 +48,37 @@ const MintComponent = () => {
         <Typography
           tag="h3"
           fontSize="36px"
-          fontType="Inter"
           color="#FFFFFF"
           lineHeight="38px"
         >
           <p>
-            <span style={{ fontSize: "46px" }}>49</span> <br />
+            <span style={{ fontSize: "46px", margin: "0 10px" }}>49</span> <br />
             USDT
           </p>
         </Typography>
         <div style={{ width: "70%" }}>
           <input
             type="text"
-            style={{
-              width: "100%",
-              height: "33px",
-              background: "#070510",
-              borderRadius: "10px",
-              outline: "none",
-              color: "#ffffff",
-              padding: "4px 0",
-            }}
+            style={inputStyles}
             placeholder="Price change"
+            className={styles.placeholderWhite}
           />
           <input
             type="text"
-            style={{
-              width: "100%",
-              height: "33px",
-              background: "#070510",
-              borderRadius: "10px",
-              outline: "none",
-              color: "#ffffff",
-              padding: "4px 0",
-            }}
+            style={inputStyles}
             placeholder="Lock mounts"
+            className={styles.placeholderWhite}
           />
           <Button
             onClick={() => {}}
-            width="100%"
-            height="39px"
-            borderRadius="10px"
-            gradient="linear-gradient(90deg, #E773EE 0%, #FF8838 100%)"
-            margin="30px 0"
+            gradient={"linear-gradient(90deg, #E773EE 0%, #FF8838 100%)"}
+            borderRadius={"10px"}
+            width={"100%"}
+            height={"39px"}
+            margin={"40px 10px"}
+            fontSize={15}
           >
-           Mint
+            Mint
           </Button>
         </div>
       </div>

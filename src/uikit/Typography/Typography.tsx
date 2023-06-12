@@ -5,18 +5,18 @@ interface TypographyProps {
   tag: 'h1' | 'h2' | 'h3';
   fontSize: string;
   children:ReactNode | string
-  fontType: string;
   color: string;
   lineHeight:string;
 }
 
-const Typography: React.FC<TypographyProps> = ({ tag, fontSize, fontType, children,color,lineHeight}) => {
+const Typography: React.FC<TypographyProps> = ({ tag, fontSize, children,color,lineHeight}) => {
   const typographyStyle: React.CSSProperties = {
     fontSize:fontSize,
-    fontFamily: fontType,
+    fontFamily: "Inter",
     color:color,
     lineHeight:lineHeight,
     fontWeight:400,
+    margin:"0px"
   };
 
   const TagComponent = tag;

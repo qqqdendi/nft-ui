@@ -23,7 +23,6 @@ const MainPageContent: React.FC<ContentProps> = ({ text }) => {
           tag="h1"
           fontSize="font-size: 48px;"
           children={formattedText}
-          fontType={"Inter"}
           color={"#FFFFFF"}
           lineHeight={"58px"}
         />
@@ -34,6 +33,7 @@ const MainPageContent: React.FC<ContentProps> = ({ text }) => {
           borderRadius="10px"
           gradient="linear-gradient(90deg, #E773EE 0%, #FF8838 100%)"
           margin="0 60px"
+          fontSize={13}
         >
           Wallet connect
         </Button>

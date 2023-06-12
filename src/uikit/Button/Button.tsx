@@ -9,14 +9,15 @@ interface ButtonProps {
   width: string,
   height: string
   margin: string 
+  fontSize: number
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, children, gradient , borderRadius, width,height, margin}) => {
+const Button: React.FC<ButtonProps> = ({ onClick, children, gradient , borderRadius, width,height, margin,fontSize}) => {
   const buttonStyle: React.CSSProperties = {
     fontFamily: 'Inter',
     fontStyle: 'normal',
     fontWeight: 400,
-    fontSize: '13px',
+    fontSize: `${fontSize}px`  ,
     lineHeight: '16px',
     color: '#FFFFFF',
     background: gradient,
