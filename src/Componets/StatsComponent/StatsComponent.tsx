@@ -18,12 +18,14 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
 }) => {
   const cardStyles: React.CSSProperties = {
     width: "100%",
-    height: "calc(100% * 230 / 900)",
+    minHeight: " calc(100% * 230 / 900)    ",
+    height:"100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    padding: "20px",
+    padding: "20px 40px",
   };
+  
 
   const rowStyles: React.CSSProperties = {
     display: "flex",
@@ -42,6 +44,7 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
               fontSize="12px"
               color="#FFFFFF"
               lineHeight="15px"
+              fontWeight={400}
             >
               You referal LVL
             </Typography>
@@ -51,6 +54,7 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
               fontSize="32px"
               color="#FFFFFF"
               lineHeight="15px"
+              fontWeight={400}
             >
               {referalLvl}
             </Typography>
@@ -62,6 +66,7 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
               fontSize="12px"
               color="#FFFFFF"
               lineHeight="15px"
+              fontWeight={400}
             >
               Refelal percent
             </Typography>
@@ -71,6 +76,7 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
               fontSize="32px"
               color="#FFFFFF"
               lineHeight="15px"
+              fontWeight={400}
             >
               {referalProcent} %
             </Typography>
@@ -78,10 +84,7 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
            
           </div>
         </div>
-        <GradientLine
-          gradient="linear-gradient(90deg, #FFD924 0%, #FF1063 100%);"
-          width="100%"
-        />
+          <GradientLine width="100%" gradient="linear-gradient(90deg, #FFD924 0%, #FF1063 100%)"/>
         <div style={rowStyles}>
           <div>
             <Typography
@@ -89,6 +92,7 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
               fontSize="12px"
               color="#FFFFFF"
               lineHeight="15px"
+              fontWeight={400}
             >
               Referal count
             </Typography>
@@ -97,6 +101,7 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
               fontSize="12px"
               color="#FFFFFF"
               lineHeight="15px"
+              fontWeight={400}
             >
               {referalCount}
             </Typography>
@@ -107,6 +112,7 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
               fontSize="12px"
               color="#FFFFFF"
               lineHeight="15px"
+              fontWeight={400}
             >
               Referal payout
             </Typography>
@@ -115,6 +121,7 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
               fontSize="12px"
               color="#FFFFFF"
               lineHeight="15px"
+              fontWeight={400}
             >
               {referalPayout} ETH
             </Typography>

@@ -12,7 +12,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
   const icons: Array<React.ComponentType<React.SVGProps<SVGSVGElement>>> = [Icon1, Icon2, Icon3];
   return <div>
         <GradientLine width='100%' gradient="linear-gradient(90deg, #FFD924 0%, #FF1063 100%)" />
-        <div style={{display:"flex"}}>
+        <div style={{display:"flex",width:"100%",height:"100%"}}>
         <Header icons={icons}/>
         {children}
         </div>

@@ -25,6 +25,7 @@ const MainPageContent: React.FC<ContentProps> = ({ text }) => {
           children={formattedText}
           color={"#FFFFFF"}
           lineHeight={"58px"}
+          fontWeight={400}
         />
         <Button
           onClick={() => {}}

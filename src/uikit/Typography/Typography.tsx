@@ -7,15 +7,16 @@ interface TypographyProps {
   children:ReactNode | string
   color: string;
   lineHeight:string;
+  fontWeight:number ;
 }
 
-const Typography: React.FC<TypographyProps> = ({ tag, fontSize, children,color,lineHeight}) => {
+const Typography: React.FC<TypographyProps> = ({ tag, fontSize, children,color,lineHeight,fontWeight}) => {
   const typographyStyle: React.CSSProperties = {
     fontSize:fontSize,
     fontFamily: "Inter",
     color:color,
     lineHeight:lineHeight,
-    fontWeight:400,
+    fontWeight:fontWeight,
     margin:"0px"
   };
 

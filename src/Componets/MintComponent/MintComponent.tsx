@@ -38,6 +38,7 @@ const MintComponent = () => {
           fontSize="48px"
           color="#FFFFFF"
           lineHeight="58px"
+          fontWeight={400}
         >
           <p>
             <span style={{ fontSize: "20px" }}>Mint you first</span>
@@ -50,6 +51,7 @@ const MintComponent = () => {
           fontSize="36px"
           color="#FFFFFF"
           lineHeight="38px"
+          fontWeight={400}
         >
           <p>
             <span style={{ fontSize: "46px", margin: "0 10px" }}>49</span> <br />
