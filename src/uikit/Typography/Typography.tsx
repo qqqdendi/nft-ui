@@ -1,4 +1,3 @@
-import { lineHeight } from '@mui/system';
 import React, {ReactNode} from 'react';
 
 interface TypographyProps {

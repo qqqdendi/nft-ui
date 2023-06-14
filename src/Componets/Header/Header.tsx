@@ -1,4 +1,4 @@
-import React, { ReactElement, FC } from 'react';
+import React, {  FC } from 'react';
 import IconButton from '../../uikit/IconBtn/IconBtn';
 import styles from "./styles.module.scss"
 

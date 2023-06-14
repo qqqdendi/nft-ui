@@ -25,7 +25,9 @@ const Button: React.FC<ButtonProps> = ({ onClick, children, gradient , borderRad
     width: width,
     height: height,
     margin:margin,
-    cursor:"pointer"
+    cursor:"pointer",
+    border:"none",
+    outline:"none"
   };
 
   return (

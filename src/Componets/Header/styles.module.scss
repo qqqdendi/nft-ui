@@ -2,5 +2,7 @@
     padding:20px 5px;
     width: 3%;
     background: #110F1D;
-    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

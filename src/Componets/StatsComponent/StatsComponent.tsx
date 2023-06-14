@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import styles from "./styles.module.scss";
 import Typography from "../../uikit/Typography/Typography";
 import Card from "../../uikit/Card/Card";
-import GradientLine from "../../uikit/GradientLine/GradientLine";
+import { ReactComponent as InfoBtn } from '../../Assets/icons/info.svg';
+import Modal from "../../uikit/Modal/Modal";
 
 export interface StatsComponentTypes {
   referalLvl: number;
@@ -23,9 +24,10 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    padding: "20px 40px",
+    padding: "20px 50px",
   };
   
+  const [isOpen, setIsOpen] = useState(false);
 
   const rowStyles: React.CSSProperties = {
     display: "flex",
@@ -33,7 +35,12 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
     marginBottom: "10px",
     marginTop: "10px",
   };
-
+  const openModal = ()=>{
+    setIsOpen(true)
+  }
+  const closeModal = ()=>{
+    setIsOpen(false)
+  }
   return (
     <div className={styles.wrapper}>
       <Card customStyles={cardStyles}>
@@ -58,6 +65,10 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
             >
               {referalLvl}
             </Typography>
+
+            
+
+
             </div>
           </div>
           <div >
@@ -84,7 +95,12 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
            
           </div>
         </div>
-          <GradientLine width="100%" gradient="linear-gradient(90deg, #FFD924 0%, #FF1063 100%)"/>
+        <div style={{
+          width:"100%",
+          background:"linear-gradient(90deg, #FFD924 0%, #FF1063 100%) ",
+          height:"4px",
+        }}>
+        </div>  
         <div style={rowStyles}>
           <div>
             <Typography
@@ -127,6 +143,12 @@ const StatsComponent: React.FC<StatsComponentTypes> = ({
             </Typography>
           </div>
         </div>
+        <p onClick={openModal} className={styles.infoBtn}>
+          <InfoBtn onClick={openModal} />
+          <Modal isOpen={isOpen} onClose={closeModal}>
+          <h4>Рыба</h4>
+        </Modal>
+        </p>
       </Card>
     </div>
   );

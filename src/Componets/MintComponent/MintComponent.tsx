@@ -6,26 +6,31 @@ import Button from "../../uikit/Button/Button";
 
 const MintComponent = () => {
   const cardStyles: React.CSSProperties = {
-    width: "30%",
+    width: "50%",
     height: "30%",
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    flexGrow:"1",
+    flexDirection:"column"
   };
 
   const containerStyles: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: "0px",
+    padding: "20px 0px",
     gap: "2px", // Добавлено свойство gap для отступов между элементами
   };
 
   const inputStyles: React.CSSProperties = {
     width: "100%",
-    height: "33px",
     background: "#070510",
     borderRadius: "10px",
     outline: "none",
     color: "#ffffff",
     padding: "8px 12px",
+    border:"none",
     margin: "2% 0",
   };
 
@@ -35,26 +40,24 @@ const MintComponent = () => {
       <div style={containerStyles}>
         <Typography
           tag="h1"
-          fontSize="48px"
+          fontSize="26px"
           color="#FFFFFF"
-          lineHeight="58px"
+          lineHeight="30px"
           fontWeight={400}
         >
-          <p>
             <span style={{ fontSize: "20px" }}>Mint you first</span>
             <br />
-            <span style={{ fontSize: "26px" }}>NFTSAFE</span>
-          </p>
+            <span style={{ fontSize: "26px",fontWeight:900 }}>NFT SAFE</span>
         </Typography>
         <Typography
           tag="h3"
-          fontSize="36px"
+          fontSize="26px"
           color="#FFFFFF"
-          lineHeight="38px"
+          lineHeight="39px"
           fontWeight={400}
         >
           <p>
-            <span style={{ fontSize: "46px", margin: "0 10px" }}>49</span> <br />
+            <span style={{ fontSize: "36px", margin: "0 10px" }}>49</span> <br />
             USDT
           </p>
         </Typography>

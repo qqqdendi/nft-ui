@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styles from "./styles.module.scss"
 import Typography from '../Typography/Typography'
+import Modal from '../Modal/Modal'
 
 export interface nftCardTypes {
     nftSale:string, 
@@ -11,6 +12,13 @@ export interface nftCardTypes {
 
 
 const NftCard:React.FC<nftCardTypes> = ({nftSale,mounth,priceChange,price}) => {
+ const [open,setOpen] = useState(false);
+ const close = ()=>{
+    setOpen(!open)
+ }
+ const openModal = ()=>{
+    setOpen(true)
+ }
   return (
     <div className={styles.wrapper}>
         <div className={styles.contentBlock}>
@@ -29,22 +37,26 @@ const NftCard:React.FC<nftCardTypes> = ({nftSale,mounth,priceChange,price}) => {
             }}>{mounth}</span> 
         </Typography>
         </div>
-        <div style={{padding:"15px 0"}}>
-        <Typography fontWeight={400} tag="h3"  fontSize='14px' color='#FFFFFF' lineHeight='17px'>
+        <div style={{padding:"15px 0"}} >
+        <Typography  fontWeight={400} tag="h3"  fontSize='14px' color='#FFFFFF' lineHeight='17px'>
             Change price:  <span style={{
                 fontFamily:"'Inter'",
                 fontSize:"24px",
                 fontWeight:"800",
 
             }}>{priceChange}%</span> 
+           
         </Typography>
         </div>
        
         </div>
        
-        <div className={styles.gradientBlock}>
+        <div className={styles.gradientBlock} onClick={openModal}>
         <Typography fontWeight={1000} tag="h1"  fontSize='14px' color='#FFFFFF' lineHeight='17px'>
-        <span>${price}</span> 
+        <Modal onClose={close} isOpen={open}>
+                <h1 style={{color:"#000"}}>Рыба </h1>
+            </Modal>
+        <span >${price}</span> 
         </Typography>
         </div>
     </div>
