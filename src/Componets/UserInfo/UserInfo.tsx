@@ -69,6 +69,7 @@ const UserInfo:React.FC<UserInfoTypes> = ({total,link}) => {
             <CopyBlock text={link}/>
         </div>
         <div className={styles.transactions}>
+        <p style={{marginLeft:"35px"}}>
         <Typography
               tag="h3"
               fontSize="10px"
@@ -78,6 +79,8 @@ const UserInfo:React.FC<UserInfoTypes> = ({total,link}) => {
             >
               You last transactions
         </Typography>
+        </p>
+       
 
         {transactions.map((item)=>(
             <TransactionCard count={item.count} txId={item.txId}/>

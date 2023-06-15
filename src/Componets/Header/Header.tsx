@@ -1,6 +1,11 @@
 import React, {  FC } from 'react';
-import IconButton from '../../uikit/IconBtn/IconBtn';
 import styles from "./styles.module.scss"
+import Icon1  from '../../Assets/icons/Twitter.svg';
+import Icon2 from '../../Assets/icons/Discord.svg';
+
+import Icon3  from '../../Assets/icons/Telegram.svg';
+
+
 
 interface HeaderProps {
   icons: Array<React.ComponentType<React.SVGProps<SVGSVGElement>>>;
@@ -12,14 +17,19 @@ const Header: FC<HeaderProps> = ({ icons }) => {
 
   return (
     <div className={styles.wrapper}>
-      {icons.map((Icon, index) => (
-        <IconButton
-          key={`icon${index}`}
-          icon={<Icon />}
-          onClick={() => handleClick(index)}
-          disabled={false}
-        />
-      ))}
+      <div style={{marginTop:"10px"}}>
+      <img src={Icon1} alt="" />
+      </div>
+      <div style={{marginTop:"20px"}}>
+      <img src={Icon3} alt="" />
+
+      </div>
+      <div style={{marginTop:"20px"}}>
+      <img src={Icon2} alt="" />
+
+      </div>
+
+
     </div>
   );
 };

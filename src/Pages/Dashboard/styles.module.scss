@@ -1,18 +1,17 @@
 .wrapper{
     max-width: 100%;
+    width: 70%;
     height: 100%;
     display: flex;
-    align-items: center;
-}
-.firstPart{
-    width: 80%;
-    height: 100%;
-    padding:  30px 40px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.firstPart {
+  
+    width: 80%;
+    height: 100%;
+    padding: 30px 40px;
+  }
 .cardPart{
     display: flex;
     margin-left: 20px;
@@ -30,25 +29,26 @@
     height: 100%;
 }
 .historyBlock{
-    margin-top: 50px;
     width:100%;
     height: 100%;
-    
+    margin-top:60px;
+
 }
 .flexBox{
     display: flex;
+    margin-top: 30px;
+
     justify-content:space-between;
-    align-items:flex-start;
-    margin-top: 20px;
-    width: 100%;
+    width: 110%;
+
 }
 .secondPart {
     width: 20%;
-    min-height: 100%;
+    height: 100%;
     margin-left: auto;
     position: absolute; 
     right: 0;
-    top: 10px;
+    top: 0px;
     background: linear-gradient(180deg, rgba(255, 16, 99, 0.1) 0%, rgba(17, 15, 29, 0) 100%), #110F1D;
-
+    margin-top: 12px;
 }

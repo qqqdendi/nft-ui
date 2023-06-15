@@ -1,8 +1,11 @@
 .wrapper{
-    padding:20px 5px;
+    padding:20px 10px;
     width: 3%;
     background: #110F1D;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 105vh;
     display: flex;
     flex-direction: column;
 }

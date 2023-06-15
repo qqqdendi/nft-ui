@@ -7,11 +7,10 @@ import Button from "../../uikit/Button/Button";
 const MintComponent = () => {
   const cardStyles: React.CSSProperties = {
     width: "50%",
-    height: "30%",
+    height: "100%",
     display:"flex",
     justifyContent:"center",
     alignItems:"center",
-    flexGrow:"1",
     flexDirection:"column"
   };
 
@@ -19,7 +18,7 @@ const MintComponent = () => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: "20px 0px",
+    padding: "35px 0px",
     gap: "2px", // Добавлено свойство gap для отступов между элементами
   };
 
@@ -28,10 +27,11 @@ const MintComponent = () => {
     background: "#070510",
     borderRadius: "10px",
     outline: "none",
+
     color: "#ffffff",
     padding: "8px 12px",
     border:"none",
-    margin: "2% 0",
+    margin: "8px 0",
   };
 
   
@@ -47,7 +47,7 @@ const MintComponent = () => {
         >
             <span style={{ fontSize: "20px" }}>Mint you first</span>
             <br />
-            <span style={{ fontSize: "26px",fontWeight:900 }}>NFT SAFE</span>
+           NFT  <span style={{ fontSize: "26px",fontWeight:900 }}> SAFE</span>
         </Typography>
         <Typography
           tag="h3"
@@ -57,7 +57,7 @@ const MintComponent = () => {
           fontWeight={400}
         >
           <p>
-            <span style={{ fontSize: "36px", margin: "0 10px" }}>49</span> <br />
+            <span style={{ fontSize: "36px", margin: "0 10px" ,fontWeight:600}}>49</span> <br />
             USDT
           </p>
         </Typography>
